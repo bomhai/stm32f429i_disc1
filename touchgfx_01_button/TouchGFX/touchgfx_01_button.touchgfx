@@ -1,0 +1,106 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Components": [
+          {
+            "RelativeFilename": "Wallpapers_240x320.png",
+            "Alpha": 255,
+            "Name": "image1",
+            "X": 0,
+            "Y": 0,
+            "Width": 240,
+            "Height": 320,
+            "Type": "Image",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "InitialStatePressed": false,
+            "Pressed": "__designer\\Blue_Togglebars_Toggle_round_large_button_ON.png",
+            "Released": "__designer\\Blue_Togglebars_Toggle_round_large_button_OFF.png",
+            "Alpha": 255,
+            "Style": "Style4",
+            "Name": "toggleButton",
+            "X": 56,
+            "Y": 141,
+            "Width": 128,
+            "Height": 38,
+            "Type": "ToggleButton",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "toggleButton",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "toggleButtonClicked",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
+        "Name": "Screen1",
+        "OverrideDefaultBufferSize": false,
+        "CanvasBufferSize": 0
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "touchgfx_01_button",
+    "Resolution": {
+      "Width": 240,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Screen1",
+    "SelectedStartupLanguage": "GB",
+    "Skin": "Blue",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 240,
+        "Height": 320
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project --project-file=../touchgfx_01_button.ioc --platform=m4",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Portrait"
+  },
+  "Version": "4.13.0"
+}
